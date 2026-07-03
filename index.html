@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariprasath R | Software Engineer & Spring Boot Developer</title>
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Portfolio of Ariprasath R, a Software Engineer and Backend Developer specializing in Java, Spring Boot, and PostgreSQL. Explore his premium interactive Zero-Gravity skills arena, projects, and experience.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        bgPrimary: '#030712', // Ultra Dark Slate
+                        bgSecondary: '#111827', // Deep Graphite
+                        bgCard: '#1E293B', // Steel Slate
+                        accentPurple: '#8B5CF6', // Vibrant Purple
+                        accentCyan: '#06B6D4', // Neon Cyan
+                        accentPink: '#EC4899', // Highlight Pink
+                        textPrimary: '#F8FAFC', // Slate 50
+                        textMuted: '#94A3B8', // Slate 400
+                    },
+                    boxShadow: {
+                        'neon-purple': '0 0 20px rgba(139, 92, 246, 0.45)',
+                        'neon-cyan': '0 0 20px rgba(6, 182, 212, 0.45)',
+                        'neon-pink': '0 0 20px rgba(236, 72, 153, 0.45)',
+                        'glass-premium': '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                        'glow-subtle': '0 0 15px rgba(255, 255, 255, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Matter.js Physics Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-bgPrimary text-textPrimary font-sans selection:bg-accentPurple selection:text-white overflow-x-hidden min-h-screen relative">
+    
+    <!-- Custom Cursor Glow Follower -->
+    <div id="cursor-glow" class="fixed w-[400px] h-[400px] rounded-full pointer-events-none z-0 opacity-40 blur-[120px] transition-transform duration-300 ease-out bg-gradient-to-r from-accentPurple via-accentCyan to-accentPink hidden md:block"></div>
+
+    <!-- Glowing Vector Art Orbs (Static background fallback) -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-[10%] left-[5%] w-[350px] h-[350px] rounded-full bg-accentPurple/10 blur-[130px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-accentCyan/10 blur-[140px] animate-pulse-slow" style="animation-delay: 2.5s;"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-6 left-0 w-full z-50 px-6 transition-all duration-300" id="navbar">
+        <div class="max-w-4xl mx-auto flex items-center justify-between glass-panel px-8 py-3.5 rounded-full border border-white/5 shadow-glass-premium">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="relative w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-accentPurple to-accentCyan p-0.5">
+                    <span class="text-sm font-display font-bold text-white bg-bgPrimary w-full h-full rounded-full flex items-center justify-center">A</span>
+                </div>
+                <span class="text-lg font-display font-bold tracking-wide bg-gradient-to-r from-accentPurple via-accentCyan to-accentPink bg-clip-text text-transparent group-hover:opacity-85 transition-opacity">
+                    Ariprasath R
+                </span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="text-xs font-semibold uppercase tracking-wider text-textMuted hover:text-textPrimary transition-colors duration-200">Home</a>
+                <a href="#skills-section" class="text-xs font-semibold uppercase tracking-wider text-textMuted hover:text-textPrimary transition-colors duration-200">Skills</a>
+                <a href="#projects-section" class="text-xs font-semibold uppercase tracking-wider text-textMuted hover:text-textPrimary transition-colors duration-200">Projects</a>
+                <a href="#experience-section" class="text-xs font-semibold uppercase tracking-wider text-textMuted hover:text-textPrimary transition-colors duration-200">Experience</a>
+                <a href="#contact-section" class="text-xs font-semibold uppercase tracking-wider text-textMuted hover:text-textPrimary transition-colors duration-200">Contact</a>
+            </div>
+
+            <!-- Navbar Action Button -->
+            <div>
+                <a href="#contact-section" class="relative group inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold rounded-full bg-gradient-to-br from-accentPurple to-accentCyan group-hover:from-accentPurple group-hover:to-accentPink hover:text-white text-white transition-all duration-300 shadow-neon-purple hover:shadow-neon-pink">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-bgPrimary rounded-full group-hover:bg-opacity-0">
+                        Let's Talk
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-6 pt-36">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[calc(100vh-140px)] flex flex-col justify-center py-12 lg:py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 flex flex-col space-y-8 text-left" id="hero-text-container">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/5 w-fit">
+                        <span class="w-2 h-2 rounded-full bg-accentCyan animate-ping"></span>
+                        <span class="text-xs text-textMuted font-semibold tracking-widest uppercase">Open for Opportunities</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight text-textPrimary leading-none">
+                        Crafting <br>
+                        <span class="bg-gradient-to-r from-accentPurple via-accentCyan to-accentPink bg-clip-text text-transparent drop-shadow-sm">
+                            Robust Backends
+                        </span> <br>
+                        with Elegance.
+                    </h1>
+
+                    <div class="h-10 text-xl md:text-2xl font-mono text-textMuted flex items-center">
+                        <span class="text-accentCyan">&gt;_ </span>
+                        <span id="job-title-typing" class="ml-2"></span>
+                        <span class="animate-pulse bg-accentPurple w-2 h-6 ml-1 inline-block" id="cursor"></span>
+                    </div>
+
+                    <p class="text-textMuted leading-relaxed text-base md:text-lg max-w-xl">
+                        Computer Science graduate (B.E., 2026) with hands-on experience building full-stack applications using Java, Spring Boot, Angular, and PostgreSQL. Skilled in integrating third-party and AI/LLM services (Gemini API) and owning features end-to-end.
+                    </p>
+
+                    <!-- Hero Call to Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-5 pt-4">
+                        <a href="#projects-section" class="flex items-center gap-2 bg-gradient-to-r from-accentPurple to-accentCyan text-white px-8 py-4 rounded-full font-bold hover:shadow-neon-purple transition-all duration-300 scale-100 hover:scale-[1.03] active:scale-95">
+                            Explore Projects
+                            <i data-lucide="arrow-up-right" class="w-4.5 h-4.5"></i>
+                        </a>
+                        <a href="#contact-section" class="flex items-center gap-2 glass-panel border border-white/5 hover:border-white/10 px-8 py-4 rounded-full font-bold text-textPrimary hover:text-white transition-all duration-300 scale-100 hover:scale-[1.03] active:scale-95">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Avatar & Grid Graphic -->
+                <div class="lg:col-span-5 flex justify-center items-center relative" id="hero-graphic-container">
+                    <div class="relative w-[340px] h-[340px] md:w-[380px] md:h-[380px]">
+                        <!-- Decorative glow rings -->
+                        <div class="absolute inset-0 rounded-full border border-accentPurple/20 animate-spin-slow opacity-60"></div>
+                        <div class="absolute -inset-4 rounded-full border border-dashed border-accentCyan/10 animate-spin-reverse opacity-40"></div>
+                        <div class="absolute inset-8 rounded-full bg-gradient-to-tr from-accentPurple/10 to-accentPink/10 blur-xl"></div>
+                        
+                        <!-- Premium Glass Box enclosing Avatar -->
+                        <div class="absolute inset-0 rounded-full overflow-hidden border border-white/10 glass-card bg-bgCard/35 flex items-center justify-center p-3 shadow-glass-premium">
+                            <img src="ari image.jpeg?v=4" alt="Ariprasath R Profile Avatar" class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700 ease-out border-2 border-white/5 hover:border-accentCyan/30">
+                        </div>
+                        
+                        <!-- Floating graphic nodes -->
+                        <div class="absolute -top-3 -right-3 p-3 bg-bgCard border border-white/10 rounded-2xl shadow-neon-purple animate-bounce-slow">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-accentPurple"></i>
+                        </div>
+                        <div class="absolute -bottom-3 -left-3 p-3 bg-bgCard border border-white/10 rounded-2xl shadow-neon-cyan animate-bounce-slow" style="animation-delay: 1.5s;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills-section" class="py-24 border-t border-white/5 relative">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+                <div class="max-w-xl">
+                    <span class="text-xs font-mono font-bold tracking-widest text-accentPurple uppercase">Core Competencies</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight text-textPrimary mt-2 mb-4">
+                        Expertise & Skills
+                    </h2>
+                    <p class="text-sm text-textMuted leading-relaxed">
+                        A structured breakdown of languages, databases, framework integrations, and developmental tools. Interact with the sandbox on the right to throw and play with the active stacks!
+                    </p>
+                </div>
+                <!-- Mini Stats Board -->
+                <div class="grid grid-cols-2 gap-4 w-full lg:w-auto">
+                    <div class="glass-card p-5 rounded-2xl border border-white/5 min-w-[140px] text-center">
+                        <span class="block text-3xl font-display font-bold text-accentCyan">20+</span>
+                        <span class="text-xs text-textMuted">Extracted Stack</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl border border-white/5 min-w-[140px] text-center">
+                        <span class="block text-3xl font-display font-bold text-accentPink">100%</span>
+                        <span class="text-xs text-textMuted">Backend Focused</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Showcase Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left: Static Skills Cards -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-6 rounded-2xl border border-white/5 hover:border-accentPurple/25 transition-all duration-300 bg-bgCard/30 group">
+                        <div class="w-10 h-10 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="code-2" class="w-5 h-5 text-accentPurple"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Languages</h3>
+                        <p class="text-xs text-textMuted">Java, JavaScript/TypeScript, SQL</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card p-6 rounded-2xl border border-white/5 hover:border-accentCyan/25 transition-all duration-300 bg-bgCard/30 group">
+                        <div class="w-10 h-10 rounded-xl bg-accentCyan/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="cpu" class="w-5 h-5 text-accentCyan"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Frameworks</h3>
+                        <p class="text-xs text-textMuted">Spring Boot, Spring Security, Angular, Next.js, WebClient</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card p-6 rounded-2xl border border-white/5 hover:border-accentPink/25 transition-all duration-300 bg-bgCard/30 group">
+                        <div class="w-10 h-10 rounded-xl bg-accentPink/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="database" class="w-5 h-5 text-accentPink"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Databases</h3>
+                        <p class="text-xs text-textMuted">PostgreSQL, MySQL, JPA / Hibernate, DBMS</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card p-6 rounded-2xl border border-white/10 transition-all duration-300 bg-bgCard/30 group">
+                        <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="terminal" class="w-5 h-5 text-textPrimary"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Tools & Platforms</h3>
+                        <p class="text-xs text-textMuted">Git, GitHub, Maven, Postman, Render, Vercel, Gemini API</p>
+                    </div>
+                </div>
+
+                <!-- Right: Zero-Gravity Arena -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-2xl border border-white/5 overflow-hidden relative shadow-glass-premium bg-bgCard/25 flex flex-col h-[480px] w-full">
+                        <!-- Sandbox Headers -->
+                        <div class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/[0.01]">
+                            <div class="flex items-center gap-1.5">
+                                <i data-lucide="orbit" class="w-4 h-4 text-accentCyan animate-spin-slow"></i>
+                                <span class="text-xs font-mono tracking-widest text-textMuted uppercase">Physics Skills Arena</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-accentPink bg-accentPink/10 border border-accentPink/20 px-2 py-0.5 rounded-full">Zero-G Active</span>
+                        </div>
+
+                        <!-- Physics Container Canvas -->
+                        <div class="relative w-full flex-grow overflow-hidden cursor-crosshair select-none" id="arena-canvas-container">
+                            <!-- Overlay Drag Prompt -->
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10 transition-opacity duration-1000" id="arena-hint">
+                                <div class="glass-card border border-white/5 bg-bgPrimary/80 px-6 py-3.5 rounded-xl flex items-center gap-3 backdrop-blur-md shadow-2xl">
+                                    <div class="w-6 h-6 rounded-full border border-dashed border-accentCyan flex items-center justify-center animate-spin">
+                                        <i data-lucide="grab" class="w-3 text-accentCyan"></i>
+                                    </div>
+                                    <span class="text-xs text-textPrimary tracking-wide font-display">Grab and throw blocks!</span>
+                                </div>
+                            </div>
+
+                            <!-- Skills Arena containing Skill Pills -->
+                            <div id="skills-arena" class="absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-300">
+                                <!-- Languages (Pink Accent) -->
+                                <div class="skill-pill pill-pink" data-category="lang">Java</div>
+                                <div class="skill-pill pill-pink" data-category="lang">JavaScript</div>
+                                <div class="skill-pill pill-pink" data-category="lang">TypeScript</div>
+                                <div class="skill-pill pill-pink" data-category="lang">SQL</div>
+                                <div class="skill-pill pill-pink" data-category="lang">DSA</div>
+                                <div class="skill-pill pill-pink" data-category="lang">OOP</div>
+                                
+                                <!-- Frameworks (Purple Accent) -->
+                                <div class="skill-pill pill-purple" data-category="fw">Spring Boot</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Angular</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Next.js</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Spring Security</div>
+                                <div class="skill-pill pill-purple" data-category="fw">WebClient</div>
+                                
+                                <!-- Databases (Cyan Accent) -->
+                                <div class="skill-pill pill-cyan" data-category="db">PostgreSQL</div>
+                                <div class="skill-pill pill-cyan" data-category="db">MySQL</div>
+                                <div class="skill-pill pill-cyan" data-category="db">DBMS</div>
+                                <div class="skill-pill pill-cyan" data-category="db">JPA</div>
+                                <div class="skill-pill pill-cyan" data-category="db">Hibernate</div>
+                                
+                                <!-- Tools/Concepts (Purple Accent) -->
+                                <div class="skill-pill pill-purple" data-category="tool">JWT</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Git</div>
+                                <div class="skill-pill pill-purple" data-category="tool">GitHub</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Postman</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Maven</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Render</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Vercel</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Gemini API</div>
+                                <div class="skill-pill pill-purple" data-category="tool">PDFBox</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Agile</div>
+                                <div class="skill-pill pill-purple" data-category="tool">IntelliJ</div>
+                                <div class="skill-pill pill-purple" data-category="tool">VS Code</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects-section" class="py-24 border-t border-white/5">
+            <div class="max-w-xl mx-auto text-center mb-20">
+                <span class="text-xs font-mono font-bold tracking-widest text-accentCyan uppercase">Portfolio Showcase</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight text-textPrimary mt-2 mb-4">
+                    Featured Systems
+                </h2>
+                <p class="text-sm text-textMuted leading-relaxed">
+                    Granular backends, distributed microservices, and end-to-end full-stack architectures.
+                </p>
+            </div>
+
+            <!-- Redesigned Luxury Projects Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentPurple/25 hover:-translate-y-2 transition-all duration-500 bg-bgCard/20 group relative">
+                    <!-- Project card Banner/Gradient Overlay -->
+                    <div class="h-44 bg-gradient-to-br from-accentPurple/30 to-accentCyan/30 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/50 backdrop-blur-[1px] z-10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentPurple/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentCyan/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <i data-lucide="file-text" class="w-10 h-10 text-accentPurple mb-3 drop-shadow-lg group-hover:rotate-12 transition-transform"></i>
+                            <span class="font-mono text-xs text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/60 border border-white/5 px-3 py-1 rounded-full">AI Document Analyzer</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">PDF Analyzer</h3>
+                            <span class="text-[10px] font-mono text-accentPurple font-semibold bg-accentPurple/10 px-2 py-0.5 rounded-full border border-accentPurple/20">Full-Stack AI</span>
+                        </div>
+                        <p class="text-sm text-textMuted flex-grow leading-relaxed mb-6">
+                            A document intelligence application that extracts and parses text from PDFs using Apache PDFBox and generates AI-powered summaries and Q&A via the Gemini 2.5 Flash API. Designed custom global exception-handling layers.
+                        </p>
+                        <!-- Tech chips -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Angular</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PDFBox</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Gemini API</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Render</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Vercel</span>
+                        </div>
+                        <!-- Action Links -->
+                        <div class="flex items-center gap-4">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPurple transition-colors duration-200">
+                                <i data-lucide="github" class="w-4 h-4"></i> Repository
+                            </a>
+                            <span class="text-white/10">|</span>
+                            <a href="#" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentCyan transition-colors duration-200">
+                                <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentCyan/25 hover:-translate-y-2 transition-all duration-500 bg-bgCard/20 group relative">
+                    <!-- Project card Banner/Gradient Overlay -->
+                    <div class="h-44 bg-gradient-to-br from-accentCyan/30 to-accentPink/30 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/50 backdrop-blur-[1px] z-10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentCyan/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPink/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <i data-lucide="droplet" class="w-10 h-10 text-accentCyan mb-3 drop-shadow-lg group-hover:rotate-12 transition-transform"></i>
+                            <span class="font-mono text-xs text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/60 border border-white/5 px-3 py-1 rounded-full">Full Stack</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">Blood Donation Management</h3>
+                            <span class="text-[10px] font-mono text-accentCyan font-semibold bg-accentCyan/10 px-2 py-0.5 rounded-full border border-accentCyan/20">Full-Stack Web</span>
+                        </div>
+                        <p class="text-sm text-textMuted flex-grow leading-relaxed mb-6">
+                            A complete platform bridging donors, hospital boards, and systems administrators. Engineered 15+ secure RESTful APIs authenticated with Spring Security and JWT, coupled with role-based dashboard control in Next.js.
+                        </p>
+                        <!-- Tech chips -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Next.js</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PostgreSQL</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">JWT</span>
+                        </div>
+                        <!-- Action Links -->
+                        <div class="flex items-center gap-4">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentCyan transition-colors duration-200">
+                                <i data-lucide="github" class="w-4 h-4"></i> Repository
+                            </a>
+                            <span class="text-white/10">|</span>
+                            <a href="#" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPink transition-colors duration-200">
+                                <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentPink/25 hover:-translate-y-2 transition-all duration-500 bg-bgCard/20 group relative lg:col-span-2 max-w-2xl mx-auto w-full">
+                    <!-- Project card Banner/Gradient Overlay -->
+                    <div class="h-44 bg-gradient-to-br from-accentPink/30 to-accentPurple/30 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/50 backdrop-blur-[1px] z-10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentPink/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPurple/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <i data-lucide="users" class="w-10 h-10 text-accentPink mb-3 drop-shadow-lg group-hover:rotate-12 transition-transform"></i>
+                            <span class="font-mono text-xs text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/60 border border-white/5 px-3 py-1 rounded-full">Full Stack</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">Employee Management System</h3>
+                            <span class="text-[10px] font-mono text-accentPink font-semibold bg-accentPink/10 px-2 py-0.5 rounded-full border border-accentPink/20">Full-Stack Database</span>
+                        </div>
+                        <p class="text-sm text-textMuted flex-grow leading-relaxed mb-6">
+                            Engineered 10+ RESTful APIs for employee, department, and role management with a layered architecture. Built the Angular frontend with proper loading states and centralized error handling, replacing placeholder UI states with live API-driven data.
+                        </p>
+                        <!-- Tech chips -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Java</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Angular</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Security</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PostgreSQL</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">JWT</span>
+                        </div>
+                        <!-- Action Links -->
+                        <div class="flex items-center gap-4">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPink transition-colors duration-200">
+                                <i data-lucide="github" class="w-4 h-4"></i> Repository
+                            </a>
+                            <span class="text-white/10">|</span>
+                            <span class="text-xs text-textMuted flex items-center gap-1">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-accentPink"></i> Verified
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience-section" class="py-24 border-t border-white/5 relative">
+            <div class="max-w-xl mx-auto text-center mb-20">
+                <span class="text-xs font-mono font-bold tracking-widest text-accentPurple uppercase">Career Journey</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight text-textPrimary mt-2 mb-4">
+                    Experience & Education
+                </h2>
+                <p class="text-sm text-textMuted mt-4 leading-relaxed">
+                    Professional history and undergraduate details in software development.
+                </p>
+            </div>
+
+            <!-- Vertical Timeline Layout -->
+            <div class="max-w-3xl mx-auto relative pl-8 sm:pl-12 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-accentPurple via-accentCyan before:to-accentPink">
+                
+                <!-- Timeline Event 1: Work -->
+                <div class="relative group mb-12">
+                    <!-- Node -->
+                    <span class="absolute -left-[37px] sm:-left-[47px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-bgPrimary border-2 border-accentPurple shadow-neon-purple transition-all group-hover:scale-125 duration-300">
+                        <span class="h-2 w-2 rounded-full bg-accentPurple"></span>
+                    </span>
+
+                    <div class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 hover:border-accentPurple/25 transition-all duration-300 shadow-glass-premium relative bg-bgCard/15 backdrop-blur-md">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-textPrimary tracking-wide font-display">Spring Boot Intern</h3>
+                                <p class="text-sm text-accentPurple font-medium">Icanio Technology, Tirunelveli</p>
+                            </div>
+                            <span class="text-xs text-textMuted bg-white/[0.03] border border-white/5 px-3 py-1 rounded-full font-mono w-fit">
+                                July 2025
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-textMuted">
+                            <li class="flex gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Collaborated in implementing robust and scalable backends utilizing <strong>Spring Boot</strong> and <strong>PostgreSQL</strong> databases.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Strengthened endpoint security by configuring role-based authentication/authorization mechanics with Spring Security.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Participated active sprints, code refactoring tasks, and query tunings to boost general runtime throughput.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Event 2: Education -->
+                <div class="relative group mb-12">
+                    <!-- Node -->
+                    <span class="absolute -left-[37px] sm:-left-[47px] top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-bgPrimary border-2 border-accentCyan shadow-neon-cyan transition-all group-hover:scale-125 duration-300">
+                        <span class="h-2 w-2 rounded-full bg-accentCyan"></span>
+                    </span>
+
+                    <div class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 hover:border-accentCyan/25 transition-all duration-300 shadow-glass-premium relative bg-bgCard/15 backdrop-blur-md">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-textPrimary tracking-wide font-display">B.E. in Computer Science</h3>
+                                <p class="text-sm text-accentCyan font-medium">Government College of Engineering, Tirunelveli</p>
+                            </div>
+                            <span class="text-xs text-textMuted bg-white/[0.03] border border-white/5 px-3 py-1 rounded-full font-mono w-fit">
+                                2022 - 2026
+                            </span>
+                        </div>
+                        <p class="text-sm text-textMuted mb-2">
+                            Graduating as a Computer Science undergraduate in 2026. Academic scores reflect continuous focus on systems architecture.
+                        </p>
+                        <div class="inline-flex gap-4 mt-2 text-xs font-mono">
+                            <span class="text-accentPink font-semibold bg-accentPink/10 px-2 py-0.5 rounded border border-accentPink/20">CGPA: 8.3/10</span>
+                            <span class="text-textMuted bg-white/5 px-2 py-0.5 rounded border border-white/5">HSC: 96%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="py-24 border-t border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 flex flex-col space-y-8">
+                    <div>
+                        <span class="text-xs font-mono font-bold tracking-widest text-accentPink uppercase">Get in Touch</span>
+                        <h2 class="text-3xl md:text-5xl font-display font-bold text-textPrimary mt-2 mb-4">Let's Connect</h2>
+                        <p class="text-sm text-textMuted leading-relaxed max-w-sm">
+                            I am open to Software Engineering positions, project collaborations, and general technical consultations. Get in touch!
+                        </p>
+                    </div>
+
+                    <!-- Modern Info Links -->
+                    <div class="flex flex-col space-y-4 pt-4">
+                        <a href="mailto:ariprasathr2005@gmail.com" class="flex items-center gap-4 p-4.5 rounded-2xl bg-bgCard/10 border border-white/5 hover:border-accentPurple/25 hover:bg-white/[0.02] transition-all group duration-300 w-full sm:max-w-md">
+                            <div class="p-3 bg-accentPurple/10 rounded-xl text-accentPurple group-hover:scale-110 transition-transform">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-textMuted font-mono uppercase tracking-wider">Send Email</span>
+                                <span class="text-sm text-textPrimary font-semibold break-all">ariprasathr2005@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/ariprasath-r-cse" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4.5 rounded-2xl bg-bgCard/10 border border-white/5 hover:border-accentCyan/25 hover:bg-white/[0.02] transition-all group duration-300 w-full sm:max-w-md">
+                            <div class="p-3 bg-accentCyan/10 rounded-xl text-accentCyan group-hover:scale-110 transition-transform">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-textMuted font-mono uppercase tracking-wider">LinkedIn</span>
+                                <span class="text-sm text-textPrimary font-semibold">linkedin.com/in/ariprasath-r-cse</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4.5 rounded-2xl bg-bgCard/10 border border-white/5 hover:border-accentPink/25 hover:bg-white/[0.02] transition-all group duration-300 w-full sm:max-w-md">
+                            <div class="p-3 bg-accentPink/10 rounded-xl text-accentPink group-hover:scale-110 transition-transform">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-textMuted font-mono uppercase tracking-wider">GitHub</span>
+                                <span class="text-sm text-textPrimary font-semibold">github.com/Ari-prasath3</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="lg:col-span-7 w-full">
+                    <div class="glass-card p-8 md:p-10 rounded-3xl border border-white/5 bg-bgCard/10 backdrop-blur-xl shadow-glass-premium relative overflow-hidden">
+                        <!-- Top Gradient bar -->
+                        <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-accentPurple via-accentCyan to-accentPink"></div>
+
+                        <form id="contact-form" class="space-y-6 relative z-10">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-[10px] font-mono text-textMuted uppercase tracking-wider mb-2">Name</label>
+                                    <input type="text" id="name" required class="w-full bg-white/[0.02] border border-white/5 focus:border-accentPurple focus:ring-1 focus:ring-accentPurple rounded-xl px-4 py-3.5 text-sm text-textPrimary placeholder-white/20 outline-none transition-colors" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-[10px] font-mono text-textMuted uppercase tracking-wider mb-2">Email</label>
+                                    <input type="email" id="email" required class="w-full bg-white/[0.02] border border-white/5 focus:border-accentPurple focus:ring-1 focus:ring-accentPurple rounded-xl px-4 py-3.5 text-sm text-textPrimary placeholder-white/20 outline-none transition-colors" placeholder="john@example.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-[10px] font-mono text-textMuted uppercase tracking-wider mb-2">Subject</label>
+                                <input type="text" id="subject" required class="w-full bg-white/[0.02] border border-white/5 focus:border-accentPurple focus:ring-1 focus:ring-accentPurple rounded-xl px-4 py-3.5 text-sm text-textPrimary placeholder-white/20 outline-none transition-colors" placeholder="Project Discussion">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-[10px] font-mono text-textMuted uppercase tracking-wider mb-2">Message</label>
+                                <textarea id="message" rows="5" required class="w-full bg-white/[0.02] border border-white/5 focus:border-accentPurple focus:ring-1 focus:ring-accentPurple rounded-xl px-4 py-3.5 text-sm text-textPrimary placeholder-white/20 outline-none transition-colors resize-none" placeholder="Let's build something awesome..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full relative group inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl bg-gradient-to-br from-accentPurple via-accentCyan to-accentPink group-hover:from-accentPurple group-hover:to-accentPink hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-accentPurple/50 transition-all duration-300 hover:shadow-neon-purple">
+                                <span class="relative w-full px-6 py-4 transition-all ease-in duration-75 bg-bgPrimary rounded-xl group-hover:bg-opacity-0 flex items-center justify-center gap-2">
+                                    Send Message
+                                    <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-[#02040a] text-center text-xs text-textMuted relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <p>&copy; 2026 Ariprasath R. All rights reserved.</p>
+            <p class="flex items-center gap-1.5">
+                Designed with <i data-lucide="heart" class="w-3.5 h-3.5 text-accentPink fill-accentPink/30 animate-pulse"></i> & <i data-lucide="orbit" class="w-3.5 h-3.5 text-accentCyan"></i> Matter.js
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom Script File -->
+    <script src="script.js"></script>
+</body>
+</html>

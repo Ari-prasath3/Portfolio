@@ -1,0 +1,217 @@
+/* style.css - Redesigned Awwwards-Style Premium Portfolio */
+
+/* Base Styles & Typography */
+html {
+    scroll-behavior: smooth;
+    background-color: #030712;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #111827;
+    border-radius: 9999px;
+    border: 2px solid #030712;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #8B5CF6, #06B6D4);
+}
+
+/* Glassmorphism System */
+.glass-panel {
+    background: rgba(17, 24, 39, 0.45);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+    background: rgba(30, 41, 59, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Slow Animations */
+@keyframes pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 0.8;
+    }
+}
+
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spin 20s linear infinite;
+}
+
+.animate-spin-reverse {
+    animation: spin-reverse 25s linear infinite;
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Skill Pills System (Matter.js DOM Synchronized) */
+.skill-pill {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.35rem;
+    border-radius: 9999px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.825rem;
+    font-weight: 600;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: auto; /* Required for mouse grabbing */
+    cursor: grab;
+    transform-origin: center center;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* Color Coding for Skills (Futuristic Scheme) */
+/* Purple: Frameworks, Operations */
+.pill-purple {
+    background: rgba(139, 92, 246, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    color: #f5f3ff;
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.05), inset 0 0 8px rgba(139, 92, 246, 0.03);
+}
+.pill-purple:hover {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.85);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.45), inset 0 0 8px rgba(139, 92, 246, 0.05);
+}
+
+/* Cyan: Databases */
+.pill-cyan {
+    background: rgba(6, 182, 212, 0.06);
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    color: #ecfeff;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.05), inset 0 0 8px rgba(6, 182, 212, 0.03);
+}
+.pill-cyan:hover {
+    background: rgba(6, 182, 212, 0.15);
+    border-color: rgba(6, 182, 212, 0.85);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.45), inset 0 0 8px rgba(6, 182, 212, 0.05);
+}
+
+/* Pink: Languages */
+.pill-pink {
+    background: rgba(236, 72, 153, 0.06);
+    border: 1px solid rgba(236, 72, 153, 0.35);
+    color: #fdf2f8;
+    text-shadow: 0 0 8px rgba(236, 72, 153, 0.4);
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.05), inset 0 0 8px rgba(236, 72, 153, 0.03);
+}
+.pill-pink:hover {
+    background: rgba(236, 72, 153, 0.15);
+    border-color: rgba(236, 72, 153, 0.85);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.45), inset 0 0 8px rgba(236, 72, 153, 0.05);
+}
+
+/* Active Drag State (Applied by script.js) */
+.skill-pill.dragging {
+    cursor: grabbing;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3) !important;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9) !important;
+    z-index: 100 !important;
+}
+
+/* Entry Load Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero-text-container {
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#hero-graphic-container {
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+/* Typing Cursor Pulse */
+#cursor {
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { background-color: transparent }
+    50% { background-color: #8B5CF6 }
+}
+
+/* Sticky Nav scroll styles */
+.nav-scrolled {
+    background: rgba(3, 7, 18, 0.75) !important;
+    backdrop-filter: blur(28px) !important;
+    -webkit-backdrop-filter: blur(28px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.nav-scrolled > div {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Matter.js Debug canvas styling (hidden unless debugging) */
+#arena-canvas-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Synced HTML pills will sit above/below this based on render styles */
+}
