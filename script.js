@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingSpan = document.getElementById('job-title-typing');
     const titles = [
         "Software Engineer",
-        "Java Developer",
-        "Spring Boot Specialist",
-        "Angular Developer"
+        "Java & Spring Boot Specialist",
+        "Cloud-Native Microservices Architect",
+        "Full-Stack & AI Systems Engineer"
     ];
     let titleIndex = 0;
     let charIndex = 0;

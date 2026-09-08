@@ -67,9 +67,9 @@
     <!-- Navigation Header -->
     <nav class="fixed top-6 left-0 w-full z-50 px-6 transition-all duration-300" id="navbar">
         <div class="max-w-4xl mx-auto flex items-center justify-between glass-panel px-8 py-3.5 rounded-full border border-white/5 shadow-glass-premium">
-            <a href="#" class="flex items-center gap-2 group">
-                <div class="relative w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-accentPurple to-accentCyan p-0.5">
-                    <span class="text-sm font-display font-bold text-white bg-bgPrimary w-full h-full rounded-full flex items-center justify-center">A</span>
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-8 h-8 rounded-full overflow-hidden flex items-center justify-center border border-accentPurple/40 p-0.5 shadow-neon-purple">
+                    <img src="ari%20image.png" alt="Ariprasath R" class="w-full h-full object-cover rounded-full">
                 </div>
                 <span class="text-lg font-display font-bold tracking-wide bg-gradient-to-r from-accentPurple via-accentCyan to-accentPink bg-clip-text text-transparent group-hover:opacity-85 transition-opacity">
                     Ariprasath R
@@ -100,7 +100,29 @@
     <main class="relative z-10 max-w-7xl mx-auto px-6 pt-36">
         
         <!-- Hero Section -->
-        <section id="hero" class="min-h-[calc(100vh-140px)] flex flex-col justify-center py-12 lg:py-16">
+        <section id="hero" class="min-h-[calc(100vh-140px)] flex flex-col justify-center py-6 lg:py-10">
+            
+            <!-- Developer Quote Banner Card -->
+            <div class="w-full mb-10 rounded-3xl overflow-hidden glass-card border border-white/10 relative shadow-glass-premium group">
+                <div class="relative h-36 sm:h-44 md:h-52 w-full overflow-hidden">
+                    <img src="banner.jpg" alt="Ariprasath R Developer Banner" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-[#030712]/60 to-[#030712]/90 backdrop-blur-[1px]"></div>
+                    <div class="absolute inset-0 flex items-center justify-between px-6 md:px-10 z-10">
+                        <div class="max-w-2xl">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accentPurple/20 border border-accentPurple/30 text-accentPurple text-[11px] font-mono font-semibold uppercase tracking-widest mb-2.5">
+                                <i data-lucide="terminal" class="w-3.5 h-3.5"></i> Developer Mindset
+                            </div>
+                            <h2 class="text-base sm:text-xl md:text-2xl font-display font-bold text-white tracking-wide leading-snug drop-shadow-md">
+                                "Your <span class="text-accentCyan">FUTURE</span> is created by what you do <span class="text-accentPurple font-mono">{ TODAY }</span> not tomorrow."
+                            </h2>
+                        </div>
+                        <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-neon-purple">
+                            <i data-lucide="code-2" class="w-6 h-6 text-accentCyan"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                 <!-- Hero Left: Content -->
                 <div class="lg:col-span-7 flex flex-col space-y-8 text-left" id="hero-text-container">
@@ -124,7 +146,7 @@
                     </div>
 
                     <p class="text-textMuted leading-relaxed text-base md:text-lg max-w-xl">
-                        Computer Science graduate (B.E., 2026) with hands-on experience building full-stack applications using Java, Spring Boot, Angular, and PostgreSQL. Skilled in integrating third-party and AI/LLM services (Gemini API) and owning features end-to-end.
+                        Computer Science graduate (B.E., 2026) specializing in Java microservices, Spring Boot, Spring Security, PostgreSQL, and modern full-stack architectures (Angular, Next.js). Experienced in building event-driven systems, AI-powered tools, and secure enterprise applications.
                     </p>
 
                     <!-- Hero Call to Action Buttons -->
@@ -148,15 +170,17 @@
                         <div class="absolute inset-8 rounded-full bg-gradient-to-tr from-accentPurple/10 to-accentPink/10 blur-xl"></div>
                         
                         <!-- Premium Glass Box enclosing Avatar -->
-                        <div class="absolute inset-0 rounded-full overflow-hidden border border-white/10 glass-card bg-bgCard/35 flex items-center justify-center p-3 shadow-glass-premium">
-                            <img src="ari image.jpeg?v=4" alt="Ariprasath R Profile Avatar" class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700 ease-out border-2 border-white/5 hover:border-accentCyan/30">
+                        <div class="absolute inset-0 rounded-full overflow-hidden border border-white/10 glass-card bg-bgCard/35 flex items-center justify-center p-2 shadow-glass-premium">
+                            <img src="ari%20image.png" alt="Ariprasath R Profile Photo" class="w-full h-full object-cover rounded-full hover:scale-105 transition-all duration-500 ease-out border-2 border-white/10 hover:border-accentCyan/50 shadow-2xl">
                         </div>
                         
                         <!-- Floating graphic nodes -->
                         <div class="absolute -top-3 -right-3 p-3 bg-bgCard border border-white/10 rounded-2xl shadow-neon-purple animate-bounce-slow">
                             <i data-lucide="shield-check" class="w-6 h-6 text-accentPurple"></i>
                         </div>
-                        <div class="absolute -bottom-3 -left-3 p-3 bg-bgCard border border-white/10 rounded-2xl shadow-neon-cyan animate-bounce-slow" style="animation-delay: 1.5s;"></div>
+                        <div class="absolute -bottom-3 -left-3 p-3 bg-bgCard border border-white/10 rounded-2xl shadow-neon-cyan animate-bounce-slow" style="animation-delay: 1.5s;">
+                            <i data-lucide="cpu" class="w-6 h-6 text-accentCyan"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -197,7 +221,7 @@
                             <i data-lucide="code-2" class="w-5 h-5 text-accentPurple"></i>
                         </div>
                         <h3 class="font-display font-bold text-textPrimary mb-2">Languages</h3>
-                        <p class="text-xs text-textMuted">Java, JavaScript/TypeScript, SQL</p>
+                        <p class="text-xs text-textMuted">Java 21/24, JavaScript, TypeScript, SQL</p>
                     </div>
 
                     <!-- Card 2 -->
@@ -205,8 +229,8 @@
                         <div class="w-10 h-10 rounded-xl bg-accentCyan/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <i data-lucide="cpu" class="w-5 h-5 text-accentCyan"></i>
                         </div>
-                        <h3 class="font-display font-bold text-textPrimary mb-2">Frameworks</h3>
-                        <p class="text-xs text-textMuted">Spring Boot, Spring Security, Angular, Next.js, WebClient</p>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Frameworks & Arch</h3>
+                        <p class="text-xs text-textMuted">Spring Boot 3.5, Spring Security, Spring Cloud Gateway, Eureka, Resilience4j, Next.js 16, Angular, React 19</p>
                     </div>
 
                     <!-- Card 3 -->
@@ -214,8 +238,8 @@
                         <div class="w-10 h-10 rounded-xl bg-accentPink/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <i data-lucide="database" class="w-5 h-5 text-accentPink"></i>
                         </div>
-                        <h3 class="font-display font-bold text-textPrimary mb-2">Databases</h3>
-                        <p class="text-xs text-textMuted">PostgreSQL, MySQL, JPA / Hibernate, DBMS</p>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Databases & ORM</h3>
+                        <p class="text-xs text-textMuted">PostgreSQL, Liquibase, Redis, H2, Spring Data JPA, MySQL</p>
                     </div>
 
                     <!-- Card 4 -->
@@ -223,8 +247,8 @@
                         <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <i data-lucide="terminal" class="w-5 h-5 text-textPrimary"></i>
                         </div>
-                        <h3 class="font-display font-bold text-textPrimary mb-2">Tools & Platforms</h3>
-                        <p class="text-xs text-textMuted">Git, GitHub, Maven, Postman, Render, Vercel, Gemini API</p>
+                        <h3 class="font-display font-bold text-textPrimary mb-2">Tools & Cloud</h3>
+                        <p class="text-xs text-textMuted">Kafka, Docker & Compose, JWT/RBAC, PDFBox, Google Gemini API, Recharts, Maven, Git</p>
                     </div>
                 </div>
 
@@ -255,40 +279,43 @@
                             <!-- Skills Arena containing Skill Pills -->
                             <div id="skills-arena" class="absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-300">
                                 <!-- Languages (Pink Accent) -->
-                                <div class="skill-pill pill-pink" data-category="lang">Java</div>
+                                <div class="skill-pill pill-pink" data-category="lang">Java 21</div>
+                                <div class="skill-pill pill-pink" data-category="lang">Java 24</div>
                                 <div class="skill-pill pill-pink" data-category="lang">JavaScript</div>
                                 <div class="skill-pill pill-pink" data-category="lang">TypeScript</div>
                                 <div class="skill-pill pill-pink" data-category="lang">SQL</div>
-                                <div class="skill-pill pill-pink" data-category="lang">DSA</div>
                                 <div class="skill-pill pill-pink" data-category="lang">OOP</div>
                                 
                                 <!-- Frameworks (Purple Accent) -->
                                 <div class="skill-pill pill-purple" data-category="fw">Spring Boot</div>
-                                <div class="skill-pill pill-purple" data-category="fw">Angular</div>
-                                <div class="skill-pill pill-purple" data-category="fw">Next.js</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Spring Cloud</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Eureka</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Resilience4j</div>
                                 <div class="skill-pill pill-purple" data-category="fw">Spring Security</div>
-                                <div class="skill-pill pill-purple" data-category="fw">WebClient</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Angular</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Next.js 16</div>
+                                <div class="skill-pill pill-purple" data-category="fw">React 19</div>
+                                <div class="skill-pill pill-purple" data-category="fw">Tailwind CSS</div>
                                 
                                 <!-- Databases (Cyan Accent) -->
                                 <div class="skill-pill pill-cyan" data-category="db">PostgreSQL</div>
+                                <div class="skill-pill pill-cyan" data-category="db">Liquibase</div>
+                                <div class="skill-pill pill-cyan" data-category="db">Redis</div>
+                                <div class="skill-pill pill-cyan" data-category="db">Spring Data JPA</div>
+                                <div class="skill-pill pill-cyan" data-category="db">H2 Database</div>
                                 <div class="skill-pill pill-cyan" data-category="db">MySQL</div>
-                                <div class="skill-pill pill-cyan" data-category="db">DBMS</div>
-                                <div class="skill-pill pill-cyan" data-category="db">JPA</div>
-                                <div class="skill-pill pill-cyan" data-category="db">Hibernate</div>
                                 
                                 <!-- Tools/Concepts (Purple Accent) -->
-                                <div class="skill-pill pill-purple" data-category="tool">JWT</div>
-                                <div class="skill-pill pill-purple" data-category="tool">Git</div>
-                                <div class="skill-pill pill-purple" data-category="tool">GitHub</div>
-                                <div class="skill-pill pill-purple" data-category="tool">Postman</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Kafka</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Docker</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Docker Compose</div>
+                                <div class="skill-pill pill-purple" data-category="tool">JWT & RBAC</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Apache PDFBox</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Google Gemini API</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Recharts</div>
                                 <div class="skill-pill pill-purple" data-category="tool">Maven</div>
-                                <div class="skill-pill pill-purple" data-category="tool">Render</div>
-                                <div class="skill-pill pill-purple" data-category="tool">Vercel</div>
-                                <div class="skill-pill pill-purple" data-category="tool">Gemini API</div>
-                                <div class="skill-pill pill-purple" data-category="tool">PDFBox</div>
-                                <div class="skill-pill pill-purple" data-category="tool">Agile</div>
-                                <div class="skill-pill pill-purple" data-category="tool">IntelliJ</div>
-                                <div class="skill-pill pill-purple" data-category="tool">VS Code</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Git & GitHub</div>
+                                <div class="skill-pill pill-purple" data-category="tool">Postman</div>
                             </div>
                         </div>
                     </div>
@@ -298,147 +325,264 @@
 
         <!-- Projects Section -->
         <section id="projects-section" class="py-24 border-t border-white/5">
-            <div class="max-w-xl mx-auto text-center mb-20">
+            <div class="max-w-2xl mx-auto text-center mb-16">
                 <span class="text-xs font-mono font-bold tracking-widest text-accentCyan uppercase">Portfolio Showcase</span>
                 <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight text-textPrimary mt-2 mb-4">
                     Featured Systems
                 </h2>
                 <p class="text-sm text-textMuted leading-relaxed">
-                    Granular backends, distributed microservices, and end-to-end full-stack architectures.
+                    Cloud-native payment platform, AI document analysis engine, secure management REST APIs, and healthcare blood donation platform.
                 </p>
             </div>
 
-            <!-- Redesigned Luxury Projects Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <!-- Project 1 -->
-                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentPurple/25 hover:-translate-y-2 transition-all duration-500 bg-bgCard/20 group relative">
-                    <!-- Project card Banner/Gradient Overlay -->
-                    <div class="h-44 bg-gradient-to-br from-accentPurple/30 to-accentCyan/30 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
-                        <div class="absolute inset-0 bg-[#030712]/50 backdrop-blur-[1px] z-10"></div>
+            <!-- 2x2 Grid Layout for 4 Featured Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: FinPay -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentPurple/30 hover:-translate-y-1.5 transition-all duration-500 bg-bgCard/20 group relative">
+                    <div class="h-44 bg-gradient-to-br from-accentPurple/30 via-bgCard to-accentCyan/20 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/60 backdrop-blur-[1px] z-10"></div>
                         <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentPurple/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
                         <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentCyan/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
                         <div class="relative z-20 flex flex-col items-center text-center">
-                            <i data-lucide="file-text" class="w-10 h-10 text-accentPurple mb-3 drop-shadow-lg group-hover:rotate-12 transition-transform"></i>
-                            <span class="font-mono text-xs text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/60 border border-white/5 px-3 py-1 rounded-full">AI Document Analyzer</span>
+                            <i data-lucide="credit-card" class="w-10 h-10 text-accentPurple mb-2 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                            <span class="font-mono text-[11px] text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/70 border border-white/10 px-3 py-1 rounded-full">
+                                Enterprise Microservices
+                            </span>
                         </div>
                     </div>
-
-                    <!-- Content -->
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">PDF Analyzer</h3>
-                            <span class="text-[10px] font-mono text-accentPurple font-semibold bg-accentPurple/10 px-2 py-0.5 rounded-full border border-accentPurple/20">Full-Stack AI</span>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex items-start justify-between mb-3 gap-2">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">FinPay – Cloud-Native Payment Platform</h3>
+                            <span class="text-[10px] font-mono text-accentPurple font-semibold bg-accentPurple/10 px-2.5 py-1 rounded-full border border-accentPurple/20 whitespace-nowrap">Java 21</span>
                         </div>
-                        <p class="text-sm text-textMuted flex-grow leading-relaxed mb-6">
-                            A document intelligence application that extracts and parses text from PDFs using Apache PDFBox and generates AI-powered summaries and Q&A via the Gemini 2.5 Flash API. Designed custom global exception-handling layers.
-                        </p>
-                        <!-- Tech chips -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 mb-6">
+                        
+                        <ul class="space-y-2.5 text-xs text-textMuted flex-grow mb-6">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Developing an enterprise-style FinTech payment platform using Spring Boot microservices to support authentication, customer, account, payment, settlement, and notification workflows.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Implemented secure JWT-based authentication and Role-Based Access Control (RBAC) using Spring Security, with centralized API routing through Spring Cloud Gateway.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Designed service discovery and centralized configuration using Eureka, Config Server, and Git-based configuration within a multi-module Maven architecture.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPurple flex-shrink-0 mt-0.5"></i>
+                                <span>Integrated PostgreSQL with Liquibase for database persistence and version-controlled schema management; Kafka, Docker, Redis, and Resilience4j are being incorporated for event-driven communication, containerization, caching, and fault tolerance.</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Java 21</span>
                             <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Angular</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PDFBox</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Gemini API</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Render</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Vercel</span>
-                        </div>
-                        <!-- Action Links -->
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPurple transition-colors duration-200">
-                                <i data-lucide="github" class="w-4 h-4"></i> Repository
-                            </a>
-                            <span class="text-white/10">|</span>
-                            <a href="#" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentCyan transition-colors duration-200">
-                                <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentCyan/25 hover:-translate-y-2 transition-all duration-500 bg-bgCard/20 group relative">
-                    <!-- Project card Banner/Gradient Overlay -->
-                    <div class="h-44 bg-gradient-to-br from-accentCyan/30 to-accentPink/30 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
-                        <div class="absolute inset-0 bg-[#030712]/50 backdrop-blur-[1px] z-10"></div>
-                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentCyan/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
-                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPink/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
-                        <div class="relative z-20 flex flex-col items-center text-center">
-                            <i data-lucide="droplet" class="w-10 h-10 text-accentCyan mb-3 drop-shadow-lg group-hover:rotate-12 transition-transform"></i>
-                            <span class="font-mono text-xs text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/60 border border-white/5 px-3 py-1 rounded-full">Full Stack</span>
-                        </div>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">Blood Donation Management</h3>
-                            <span class="text-[10px] font-mono text-accentCyan font-semibold bg-accentCyan/10 px-2 py-0.5 rounded-full border border-accentCyan/20">Full-Stack Web</span>
-                        </div>
-                        <p class="text-sm text-textMuted flex-grow leading-relaxed mb-6">
-                            A complete platform bridging donors, hospital boards, and systems administrators. Engineered 15+ secure RESTful APIs authenticated with Spring Security and JWT, coupled with role-based dashboard control in Next.js.
-                        </p>
-                        <!-- Tech chips -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 mb-6">
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Next.js</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PostgreSQL</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">JWT</span>
-                        </div>
-                        <!-- Action Links -->
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentCyan transition-colors duration-200">
-                                <i data-lucide="github" class="w-4 h-4"></i> Repository
-                            </a>
-                            <span class="text-white/10">|</span>
-                            <a href="#" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPink transition-colors duration-200">
-                                <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentPink/25 hover:-translate-y-2 transition-all duration-500 bg-bgCard/20 group relative lg:col-span-2 max-w-2xl mx-auto w-full">
-                    <!-- Project card Banner/Gradient Overlay -->
-                    <div class="h-44 bg-gradient-to-br from-accentPink/30 to-accentPurple/30 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
-                        <div class="absolute inset-0 bg-[#030712]/50 backdrop-blur-[1px] z-10"></div>
-                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentPink/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
-                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPurple/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
-                        <div class="relative z-20 flex flex-col items-center text-center">
-                            <i data-lucide="users" class="w-10 h-10 text-accentPink mb-3 drop-shadow-lg group-hover:rotate-12 transition-transform"></i>
-                            <span class="font-mono text-xs text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/60 border border-white/5 px-3 py-1 rounded-full">Full Stack</span>
-                        </div>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">Employee Management System</h3>
-                            <span class="text-[10px] font-mono text-accentPink font-semibold bg-accentPink/10 px-2 py-0.5 rounded-full border border-accentPink/20">Full-Stack Database</span>
-                        </div>
-                        <p class="text-sm text-textMuted flex-grow leading-relaxed mb-6">
-                            Engineered 10+ RESTful APIs for employee, department, and role management with a layered architecture. Built the Angular frontend with proper loading states and centralized error handling, replacing placeholder UI states with live API-driven data.
-                        </p>
-                        <!-- Tech chips -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 mb-6">
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Java</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Angular</span>
                             <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Security</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">JWT & RBAC</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Cloud Gateway</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Eureka</span>
                             <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PostgreSQL</span>
-                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">JWT</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Liquibase</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Kafka</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Docker</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Redis</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Resilience4j</span>
                         </div>
-                        <!-- Action Links -->
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPink transition-colors duration-200">
-                                <i data-lucide="github" class="w-4 h-4"></i> Repository
+
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPurple transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> GitHub Repository
                             </a>
-                            <span class="text-white/10">|</span>
-                            <span class="text-xs text-textMuted flex items-center gap-1">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-accentPink"></i> Verified
+                            <span class="text-[11px] font-mono text-accentPurple bg-accentPurple/10 px-2.5 py-0.5 rounded-full border border-accentPurple/20 flex items-center gap-1">
+                                <i data-lucide="shield-check" class="w-3 h-3"></i> Microservices
                             </span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 2: PDF Analyzer -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentCyan/30 hover:-translate-y-1.5 transition-all duration-500 bg-bgCard/20 group relative">
+                    <div class="h-44 bg-gradient-to-br from-accentCyan/30 via-bgCard to-accentPink/20 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/60 backdrop-blur-[1px] z-10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentCyan/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPink/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <i data-lucide="sparkles" class="w-10 h-10 text-accentCyan mb-2 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                            <span class="font-mono text-[11px] text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/70 border border-white/10 px-3 py-1 rounded-full">
+                                AI Document Platform
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex items-start justify-between mb-3 gap-2">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">PDF Analyzer – AI Document Platform</h3>
+                            <span class="text-[10px] font-mono text-accentCyan font-semibold bg-accentCyan/10 px-2.5 py-1 rounded-full border border-accentCyan/20 whitespace-nowrap">Java 21</span>
+                        </div>
+                        
+                        <ul class="space-y-2.5 text-xs text-textMuted flex-grow mb-6">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Built a full-stack AI-powered PDF analysis platform using Spring Boot and Angular to extract and generate structured insights from publicly accessible PDF documents.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Developed a layered backend architecture with dedicated services for PDF validation, downloading, text extraction using Apache PDFBox, and AI-powered document analysis using Google Gemini.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Implemented input validation, CORS protection, PDF size restrictions, token truncation, centralized exception handling, and server-side API key management to improve security and reliability.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Containerized the application using Docker and Docker Compose with environment-based configuration, enabling a scalable and cloud-ready deployment setup.</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Java 21</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Angular</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">TypeScript</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Apache PDFBox</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Google Gemini</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Docker</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Docker Compose</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentCyan transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> GitHub Repository
+                            </a>
+                            <span class="text-[11px] font-mono text-accentCyan bg-accentCyan/10 px-2.5 py-0.5 rounded-full border border-accentCyan/20 flex items-center gap-1">
+                                <i data-lucide="cpu" class="w-3 h-3"></i> AI & Cloud-Ready
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Employee Management Application -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentPink/30 hover:-translate-y-1.5 transition-all duration-500 bg-bgCard/20 group relative">
+                    <div class="h-44 bg-gradient-to-br from-accentPink/30 via-bgCard to-accentPurple/20 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/60 backdrop-blur-[1px] z-10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentPink/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPurple/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <i data-lucide="users" class="w-10 h-10 text-accentPink mb-2 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                            <span class="font-mono text-[11px] text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/70 border border-white/10 px-3 py-1 rounded-full">
+                                Secure RESTful API
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex items-start justify-between mb-3 gap-2">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">Employee Management Application</h3>
+                            <span class="text-[10px] font-mono text-accentPink font-semibold bg-accentPink/10 px-2.5 py-1 rounded-full border border-accentPink/20 whitespace-nowrap">Java 24</span>
+                        </div>
+                        
+                        <ul class="space-y-2.5 text-xs text-textMuted flex-grow mb-6">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPink flex-shrink-0 mt-0.5"></i>
+                                <span>Developed a secure RESTful API for managing employees, departments, skills, and roles with complete CRUD functionality.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPink flex-shrink-0 mt-0.5"></i>
+                                <span>Implemented JWT-based authentication with access and refresh tokens and Role-Based Access Control (RBAC) for ADMIN and EMPLOYEE users.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPink flex-shrink-0 mt-0.5"></i>
+                                <span>Designed relational data models and persistence using Spring Data JPA and PostgreSQL, including employee-to-department and employee-to-skill relationships.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentPink flex-shrink-0 mt-0.5"></i>
+                                <span>Structured REST APIs using a maintainable layered architecture with Spring Security-based authorization and database-backed business operations.</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Java 24</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot 3.5.3</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Data JPA</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Security</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">PostgreSQL</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">JWT (jjwt)</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Lombok</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Maven</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentPink transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> GitHub Repository
+                            </a>
+                            <span class="text-[11px] font-mono text-accentPink bg-accentPink/10 px-2.5 py-0.5 rounded-full border border-accentPink/20 flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> RBAC & JPA
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: BloodLink -->
+                <div class="glass-card rounded-2xl border border-white/5 overflow-hidden flex flex-col h-full hover:border-accentCyan/30 hover:-translate-y-1.5 transition-all duration-500 bg-bgCard/20 group relative">
+                    <div class="h-44 bg-gradient-to-br from-accentCyan/30 via-bgCard to-accentPurple/20 relative flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                        <div class="absolute inset-0 bg-[#030712]/60 backdrop-blur-[1px] z-10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-accentCyan/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-accentPurple/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <i data-lucide="heart-pulse" class="w-10 h-10 text-accentCyan mb-2 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                            <span class="font-mono text-[11px] text-textMuted font-semibold tracking-wider uppercase bg-bgPrimary/70 border border-white/10 px-3 py-1 rounded-full">
+                                Full-Stack Healthcare
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex items-start justify-between mb-3 gap-2">
+                            <h3 class="text-xl font-bold font-display text-textPrimary tracking-wide">BloodLink – Blood Donation Platform</h3>
+                            <span class="text-[10px] font-mono text-accentCyan font-semibold bg-accentCyan/10 px-2.5 py-1 rounded-full border border-accentCyan/20 whitespace-nowrap">Next.js + Spring</span>
+                        </div>
+                        
+                        <ul class="space-y-2.5 text-xs text-textMuted flex-grow mb-6">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Developed a full-stack blood donation platform connecting donors, hospitals, recipients, and administrators through role-specific workflows.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Implemented token-based authentication and Role-Based Access Control (RBAC) for Donor, Hospital, Recipient, and Admin roles using Spring Boot REST APIs.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Built blood request lifecycle management, donor matching based on blood group and location, urgent notifications, and donation tracking functionality.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accentCyan flex-shrink-0 mt-0.5"></i>
+                                <span>Developed responsive dashboards and analytics using Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, and Recharts, with reusable components and mobile-first design.</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5 mb-6">
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Next.js 16</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">React 19.2</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">TypeScript 5.7</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Tailwind CSS</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">shadcn/ui</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Recharts</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Spring Boot 3.4.1</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">Java 17</span>
+                            <span class="text-[10px] font-mono bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full text-textMuted">H2 Database</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/Ari-prasath3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-semibold text-textPrimary hover:text-accentCyan transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> GitHub Repository
+                            </a>
+                            <span class="text-[11px] font-mono text-accentCyan bg-accentCyan/10 px-2.5 py-0.5 rounded-full border border-accentCyan/20 flex items-center gap-1">
+                                <i data-lucide="bar-chart-3" class="w-3 h-3"></i> Dashboards & Analytics
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
